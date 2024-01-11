@@ -1,0 +1,8 @@
+__pycache__/
+Lib/
+*.pyc 
+*.pyo
+*.pyd
+Scripts/
+etc/
+pyvenv.cfg

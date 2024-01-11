@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Mastery: Practice Letters with Our Interactive Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("/static/bg_image/background.jpg");
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Cofogas Sans', sans-serif;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1, p {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-family: 'Cofogas Sans', sans-serif;
+        }
+        img {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        textarea {
+            font-size: 24px;
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #064e97;
+            color: white;
+        }
+        .btn {
+            font-size: 1.2em;
+            margin-top: 20px;
+            font-family: 'Cofogas Sans', sans-serif;
+        }
+        .roboto-black {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .description-box {
+            background-color: #064e97;/* Azul marino */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            width: 70%; /* Ancho del recuadro de descripción */
+            border: 2px solid #ffcc99; /* Naranja claro durazno */
+        }
+        .description-box p {
+            color: white; /* Texto en naranja claro durazno */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Alphabet Mastery: Practice Letters with Our Interactive Model</h1>
+        <div class="description-box">
+            <p>Dive into the world of fingerspelling with our dedicated subpage, where you can seamlessly practice the letters of the alphabet through our cutting-edge interactive model. Tailored for learners of all levels, this engaging platform offers a hands-on experience to refine your fingerspelling skills. Our model provides real-time feedback, ensuring precision and accuracy as you navigate through each letter. Elevate your signing capabilities by immersing yourself in an intuitive learning environment. Unleash the power of your hands and master the art of fingerspelling right here!</p>
+        </div>
+        <div>
+            <!-- Space for the camera display (you can implement this part) -->
+            <!-- Image of the ASL alphabet -->
+            <img src="{{ url_for('static', filename='bg_image/alphabet_chart.jpg') }}" alt="ASL Alphabet Chart">
+            <!-- Text area for the predicted letters -->
+            <textarea id="predictedText" rows="4" cols="50"></textarea>
+            <!-- Button to go back to the Home Page -->
+            <a href="{{ url_for('home') }}" class="btn btn-primary">Back to Home Page</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Some Words</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+         body {
+            background-image: url("/static/bg_image/background.jpg");
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Cofogas Sans', sans-serif;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1, p {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-family: 'Cofogas Sans', sans-serif;
+        }
+        img {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        textarea {
+            font-size: 24px;
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #064e97;
+            color: white;
+        }
+        .btn {
+            font-size: 1.2em;
+            margin-top: 20px;
+            font-family: 'Cofogas Sans', sans-serif;
+        }
+        .roboto-black {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .description-box {
+            background-color: #064e97;/* Azul marino */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            width: 70%; /* Ancho del recuadro de descripción */
+            border: 2px solid #ffcc99; /* Naranja claro durazno */
+        }
+        .description-box p {
+            color: white; /* Texto en naranja claro durazno */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Build Some Words</h1>
+        <div class="description-box">
+            <p>Embark on a linguistic adventure with 'SignSavvy,' where the magic of sign language unfolds through the formation of meaningful words. Immerse yourself in the art of combining individual letters to construct a diverse vocabulary. Our interactive model provides a hands-on experience, allowing you to seamlessly build words and reinforce your alphabet mastery. Receive real-time feedback, explore various linguistic challenges, and watch as your signing proficiency flourishes.</p>
+        </div>
+        <div>
+            <!-- Space for the camera display (you can implement this part) -->
+            <!-- Image of the ASL alphabet -->
+            <img src="{{ url_for('static', filename='bg_image/alphabet_chart.jpg') }}" alt="ASL Alphabet Chart">
+            <!-- Text area for the predicted letters -->
+            <textarea id="predictedText" rows="4" cols="50"></textarea>
+            <!-- Button to go back to the Home Page -->
+            <a href="{{ url_for('home') }}" class="btn btn-primary">Back to Home Page</a>
+            <!-- Button to delete the last letter -->
+            <button onclick="deleteLastLetter()" class="btn btn-danger">Delete Letter</button>
+        </div>
+        <script>
+            function deleteLastLetter() {
+                var textArea = document.getElementById("predictedText");
+                var text = textArea.value;
+                textArea.value = text.slice(0, -1);
+            }
+        </script>
+    </div>
+</body>
+</html>
