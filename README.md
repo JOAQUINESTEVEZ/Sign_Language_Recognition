@@ -1,4 +1,5 @@
 # Sign Language Recognition Using LSTM Neural Networks 
+// Author: Joaquin Estevez Year: 2024
 
 ## ![Captura de pantalla 2024-01-10 192402](https://github.com/JOAQUINESTEVEZ/Sign_Language_Recognition/assets/105304562/665c144f-eb14-411a-b2c3-fe2248709740)
 
