@@ -17,7 +17,7 @@ Sign languages are languages that use the visual-manual modality to convey meani
   ![alphabet_chart](https://github.com/JOAQUINESTEVEZ/Sign_Language_Recognition/assets/105304562/bd7b7974-d4b8-4742-aa26-7a0e31f5349e)
 
 ## Model
-- A LSTM (LongvShort-Term Memory) Neural Networks model was choosen.
+- A LSTM (Long Short-Term Memory) Neural Networks model was choosen.
 - ### Why?
   - It excels at capturing long-term dependencies, making it ideal for sequence prediction tasks.
   - Unlike traditional neural networks, LSTM incorporates feedback connections, allowing it to process entire sequences of data, not just individual data points, which is very useful to determine signs that require movement and are not static.
